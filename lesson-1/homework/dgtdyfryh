@@ -1,0 +1,147 @@
+create database practice_for_sql
+go 
+use practice_for_sql
+
+
+
+CREATE TABLE Orders (
+    customer_id INT,
+    quantity INT,
+    price DECIMAL(10,2),
+    order_date DATE
+);
+
+INSERT INTO Orders VALUES
+(1, 1, 150.00, '2025-07-10'),
+(2, 3, 120.00, '2025-07-11'),
+(3, 6, 45.00,  '2025-07-12'),
+(4, 2, 80.00,  '2025-07-13'),
+(5, 4, 110.00, '2025-07-14'),
+(6, 1, 60.00,  '2025-07-15');
+
+select *,
+case 
+  when quantity = 1 then '5%'
+  when quantity between 2 and 5 and price>100 then '10%'
+  when quantity >5 and price<50 then '15%'
+  else 'no discount' end as discount
+from Orders
+
+
+CREATE TABLE Employees (
+    name VARCHAR(50),
+    department VARCHAR(20),
+    age INT,
+    salary INT
+);
+
+INSERT INTO Employees VALUES
+('Alice', 'HR', 28, 50000),
+('Ethan', 'Finance', 35, 80000),
+('Oscar', 'IT', 30, 95000),
+('Uma', 'Sales', 40, 100000),
+('Brian', 'Sales', 29, 30000),
+('David', 'Marketing', 32, 70000);
+
+select * from Employees
+where name not like 'and%' and salary <> salary * 0.1
+
+
+
+
+CREATE TABLE Old_Customers (
+    customer_id INT,
+    name VARCHAR(50)
+);
+
+CREATE TABLE New_Customers (
+    customer_id INT,
+    name VARCHAR(50)
+);
+
+INSERT INTO Old_Customers VALUES
+(1, 'Alice'),
+(2, 'Bob'),
+(3, 'Charlie');
+
+INSERT INTO New_Customers VALUES
+(2, 'Bob'),
+(3, 'Charlie'),
+(4, 'Diana'),
+(5, 'Evan');
+  select * from Old_Customers
+  except
+  select * from New_Customers
+
+   select * from New_Customers
+  except
+  select * from Old_Customers
+
+  CREATE TABLE Products (
+    product_id INT,
+    price DECIMAL(10,2)
+);
+
+CREATE TABLE Discounts (
+    product_id INT,
+    discount_percent INT
+);
+
+INSERT INTO Products VALUES
+(1, 100.00),
+(2, 200.00),
+(3, 150.00),
+(4, 80.00);
+
+INSERT INTO Discounts VALUES
+(1, 10),
+(2, 20),
+(3, 5);
+
+
+
+
+
+
+CREATE TABLE Employees1 (
+    emp_id INT,
+    name VARCHAR(50),
+    age INT,
+    email VARCHAR(100)
+);
+
+INSERT INTO Employees1 VALUES
+(1, 'Ali', 25, 'ali@example.com'),
+(2, 'Vika', 19, 'vika@example.com')
+
+select * from Employees1
+
+alter table employees1
+add is_avtive int default 1
+
+exec sp_rename'Employees1.name', 'full_name', 'column' 
+
+alter table employees1
+alter column age smallint
+
+
+alter table employees1
+add constraint ck_name check  (age > 18)
+
+insert into Employees1 (age)  values (17)
+drop table Orders
+CREATE TABLE Orders (
+    order_id INT,
+    customer_id INT,
+    order_date DATE
+);
+
+INSERT INTO Orders VALUES
+(101, 1, '2025-07-10'),
+(102, 1, '2025-07-15'),
+(103, 2, '2025-07-05'),
+(104, 2, '2025-07-18'),
+(105, 3, '2025-07-14');
+
+delete from Orders
+where order_date not in ()
