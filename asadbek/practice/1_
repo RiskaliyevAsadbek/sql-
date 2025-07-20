@@ -1,0 +1,408 @@
+create database asadbek_practice
+go
+use asadbek_practice
+CREATE TABLE patients (
+    id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    age INT,
+    city VARCHAR(100),
+    diagnosis VARCHAR(20),
+    admission_date DATE,
+    height_cm DECIMAL(5,1)
+);
+
+INSERT INTO patients (id, first_name, last_name, age, city, diagnosis, admission_date, height_cm) VALUES
+(1, 'Gregory', 'Crane', 56, 'South Ronnie', 'asthma', '2025-05-08', 182.1),
+(2, 'Jesse', 'Smith', 69, 'East Frances', 'flu', '2023-08-29', 168.5),
+(3, 'Jenna', 'Jackson', 46, 'West Samanthamouth', 'healthy', '2025-01-17', 166.3),
+(4, 'Shelia', 'Hobbs', 32, 'West David', 'flu', '2025-05-14', 157.1),
+(5, 'Gregory', 'Gates', 60, 'West Candacefurt', 'asthma', '2023-10-25', 162.3);
+INSERT INTO patients (id, first_name, last_name, age, city, diagnosis, admission_date, height_cm) VALUES
+(6, 'Kimberly', 'Chavez', 67, 'North Nicholasport', 'diabetes', '2023-07-28', 181.4),
+(7, 'Angela', 'Brown', 46, 'Lake Maria', 'covid', '2024-06-06', 172.5),
+(8, 'Angela', 'Sanchez', 24, 'West Brittany', 'covid', '2024-12-25', 176.5),
+(9, 'Kimberly', 'Zamora', 27, 'Lake Daniel', 'flu', '2024-04-10', 158.6),
+(10, 'Ann', 'Golden', 61, 'East Michaelborough', 'flu', '2023-09-13', 169.7),
+(11, 'Joseph', 'Rogers', 32, 'Rodriguezbury', 'healthy', '2023-12-29', 186.7),
+(12, 'Raymond', 'Smith', 49, 'Christophermouth', 'asthma', '2024-10-19', 163.2),
+(13, 'Stephanie', 'Chen', 33, 'North Hannahville', 'healthy', '2023-10-14', 155.7),
+(14, 'Wanda', 'Fitzgerald', 55, 'Christopherberg', 'asthma', '2023-08-03', 180.6),
+(15, 'Donna', 'Raymond', 47, 'Kristinmouth', 'healthy', '2024-10-03', 174.1),
+(16, 'Crystal', 'Cruz', 59, 'Micheleburgh', 'covid', '2023-12-03', 171.0),
+(17, 'Amy', 'Hernandez', 67, 'North Sean', 'healthy', '2024-08-13', 171.4),
+(18, 'Dana', 'Rodriguez', 37, 'Port Douglas', 'asthma', '2024-03-12', 160.8),
+(19, 'Jason', 'Sandoval', 49, 'Davidside', 'asthma', '2023-07-30', 168.9),
+(20, 'Matthew', 'Kennedy', 24, 'Lake Marcia', 'diabetes', '2023-10-18', 160.0),
+(21, 'Karen', 'Weber', 46, 'West Kimberlyville', 'flu', '2024-06-14', 157.9),
+(22, 'Stephanie', 'Berry', 47, 'Reeveshaven', 'flu', '2024-12-26', 180.6),
+(23, 'Sean', 'Rios', 48, 'Kellytown', 'asthma', '2024-09-17', 159.8),
+(24, 'Anna', 'Wilson', 63, 'Melindaville', 'asthma', '2023-07-21', 155.2),
+(25, 'Wendy', 'Beck', 55, 'Morenoview', 'diabetes', '2024-12-30', 158.1),
+(26, 'Anthony', 'Woods', 60, 'Jonathanshire', 'covid', '2024-02-11', 159.1),
+(27, 'Jeremy', 'Long', 28, 'Lake Jacob', 'flu', '2025-01-17', 162.5),
+(28, 'Tracy', 'Thompson', 60, 'Dawnburgh', 'healthy', '2023-10-31', 181.4),
+(29, 'Kenneth', 'Avila', 24, 'Brownburgh', 'healthy', '2024-01-07', 175.0),
+(30, 'Samuel', 'Barker', 45, 'Christinafurt', 'covid', '2025-03-18', 178.7),
+(31, 'David', 'Mitchell', 50, 'Nelsonmouth', 'diabetes', '2024-03-15', 167.9),
+(32, 'Teresa', 'Thomas', 61, 'West Jeffrey', 'asthma', '2024-01-02', 159.8),
+(33, 'Donna', 'Gonzalez', 62, 'Richardland', 'asthma', '2025-04-06', 183.4),
+(34, 'Mary', 'Bennett', 26, 'Oconnorhaven', 'asthma', '2023-08-07', 175.9),
+(35, 'Jessica', 'Ramos', 41, 'Lake Tammy', 'flu', '2023-09-10', 156.7),
+(36, 'David', 'Casey', 30, 'Allisonfurt', 'flu', '2023-10-20', 183.8),
+(37, 'Jill', 'Peters', 42, 'Rodriguezfurt', 'diabetes', '2024-06-22', 174.1),
+(38, 'Emily', 'Russell', 34, 'West Nicholasland', 'asthma', '2024-07-17', 170.3),
+(39, 'Maria', 'Sullivan', 68, 'North Elizabethberg', 'covid', '2024-08-03', 160.7),
+(40, 'Brian', 'Carter', 52, 'Lake Steven', 'asthma', '2025-04-18', 180.6),
+(41, 'Donald', 'Blevins', 28, 'Port Katherinemouth', 'flu', '2024-06-12', 173.3),
+(42, 'Elizabeth', 'Curry', 61, 'North Kelly', 'asthma', '2024-06-24', 171.2),
+(43, 'Angela', 'Jackson', 46, 'Kellyshire', 'covid', '2025-02-11', 155.6),
+(44, 'Gregory', 'Wallace', 39, 'South Amberville', 'healthy', '2024-11-25', 178.4),
+(45, 'Sarah', 'Foster', 23, 'West Edwin', 'flu', '2024-05-06', 181.6),
+(46, 'Tara', 'Simmons', 33, 'Port Shannon', 'diabetes', '2024-11-03', 167.1),
+(47, 'Christopher', 'Hardy', 55, 'Wendyview', 'healthy', '2023-09-06', 180.2),
+(48, 'Christopher', 'Cabrera', 34, 'Jonesfurt', 'diabetes', '2023-10-26', 158.8),
+(49, 'Charles', 'Jones', 33, 'Lake Emily', 'flu', '2024-11-28', 175.3),
+(50, 'Brittany', 'Miller', 55, 'Christopherhaven', 'healthy', '2024-07-04', 156.9),
+(51, 'Mary', 'Beard', 37, 'East Jerry', 'covid', '2023-09-29', 170.0),
+(52, 'Angela', 'Marshall', 66, 'Lindsaychester', 'flu', '2023-09-30', 168.2),
+(53, 'Chelsea', 'Lewis', 22, 'Petershire', 'asthma', '2023-07-21', 162.1),
+(54, 'Bryan', 'Morgan', 36, 'North Benjamin', 'healthy', '2024-08-31', 158.9),
+(55, 'Deborah', 'Ballard', 47, 'Lake Paulshire', 'asthma', '2023-09-09', 181.2)
+
+
+select * from patients
+where age > 60 
+
+
+select * from patients
+where diagnosis in ('asthma', 'flu') and age < 30 and height_cm < 165
+
+select * from patients
+where diagnosis <> 'healthy' and 
+(age > 50 and height_cm < 160) or (age < 30 and height_cm > 180) 
+
+
+
+select * from patients
+where age < 25
+
+select * from patients
+where city like 'L%'
+
+
+select * from patients 
+where diagnosis = 'healthy'
+
+
+
+select * from patients
+where diagnosis in ('flu', 'covid') and age between 30 and 50
+
+select * from patients
+where first_name like 'J____'
+
+
+select * from patients
+where city  like '% %'
+
+
+select * from patients
+where last_name not like  '%a%'
+
+select * from patients
+where diagnosis = 'asthma' and city not like '%lake%' and age > 50
+
+select * from patients
+where height_cm < age
+
+select * from patients
+where diagnosis  not in ('flu', 'asthma')
+
+select * from patients
+where id % 2 = 1
+
+select * from patients
+where age > 65 and height_cm < 160
+
+select * from patients
+where first_name like '%a' and last_name like 'Mr%'
+
+select * from patients
+where age < 30 and diagnosis <> 'healthy'
+
+select * from patients
+where first_name like '%[a, e, i, o, u]%'
+
+select * from patients
+where age>40 and diagnosis='healthy' and height_cm < 150 
+
+
+select *, 
+case
+when height_cm < 160 then 'short'
+when height_cm between 160 and 180 then 'average'
+else 'tall' end as height_desc
+from patients
+where
+(
+case when height_cm < 160 then 'short'
+when height_cm > 180 then 'tall' end)
+in ('short', 'tall') and age < 40
+
+select *,
+case 
+  when age>=60 and diagnosis<> 'healthy' then 'high'
+  when age between 40 and 59  then 'medium'
+  else 'low' end as risk_level
+from patients
+
+select * from patients
+where 
+ (
+case 
+  when diagnosis = 'flu' and age < 35 then '1'
+  when diagnosis = 'diabetes' and height_cm > 175 then '1'
+  else 0 end
+  ) =1
+
+SELECT *
+FROM patients
+WHERE
+  (
+    CASE
+      WHEN diagnosis = 'flu' AND age < 35 THEN 1
+      WHEN diagnosis = 'diabetes' AND height_cm > 175 THEN 1
+      WHEN diagnosis NOT IN ('flu', 'diabetes') THEN 1
+      ELSE 0
+    END
+  ) = 1;
+
+
+  CREATE TABLE Products (
+    ProductCode VARCHAR(20),
+    ProductName VARCHAR(255),
+    Price DECIMAL(10, 2)
+);
+INSERT INTO Products (ProductCode, ProductName, Price)
+VALUES
+('FR-R92B-58', 'HL Road Frame - Black, 58', 1431.50),
+('FR-R92R-58', 'HL Road Frame - Red, 58', 1431.50),
+('HL-U509-R', 'Sport-100 Helmet, Red', 34.99),
+('HL-U509', 'Sport-100 Helmet, Black', 34.99),
+('SO-B909-M', 'Mountain Bike Socks, M', 9.50),
+('SO-B909-L', 'Mountain Bike Socks, L', 9.50),
+('HL-U509-B', 'Sport-100 Helmet, Blue', 34.99),
+('CA-1098', 'AWC Logo Cap', 8.99),
+('LJ-0192-S', 'Long-Sleeve Logo Jersey, S', 49.99),
+('LJ-0192-M', 'Long-Sleeve Logo Jersey, M', 49.99),
+('LJ-0192-L', 'Long-Sleeve Logo Jersey, L', 49.99),
+('LJ-0192-X', 'Long-Sleeve Logo Jersey, XL', 49.99),
+('FR-R92R-62', 'HL Road Frame - Red, 62', 1431.50),
+('FR-R92R-44', 'HL Road Frame - Red, 44', 1431.50),
+('FR-R92R-48', 'HL Road Frame - Red, 48', 1431.50),
+('FR-R92R-52', 'HL Road Frame - Red, 52', 1431.50),
+('FR-R92R-56', 'HL Road Frame - Red, 56', 1431.50),
+('FR-R38B-58', 'LL Road Frame - Black, 58', 337.22),
+('FR-R38B-60', 'LL Road Frame - Black, 60', 337.22),
+('FR-R38B-62', 'LL Road Frame - Black, 62', 337.22),
+('FR-R38R-44', 'LL Road Frame - Red, 44', 337.22),
+('FR-R38R-48', 'LL Road Frame - Red, 48', 337.22),
+('FR-R38R-52', 'LL Road Frame - Red, 52', 337.22),
+('FR-R38R-58', 'LL Road Frame - Red, 58', 337.22),
+('FR-R38R-60', 'LL Road Frame - Red, 60', 337.22),
+('FR-R38R-62', 'LL Road Frame - Red, 62', 337.22),
+('FR-R72R-44', 'ML Road Frame - Red, 44', 594.83),
+('FR-R72R-48', 'ML Road Frame - Red, 48', 594.83),
+('FR-R72R-52', 'ML Road Frame - Red, 52', 594.83),
+('FR-R72R-58', 'ML Road Frame - Red, 58', 594.83),
+('FR-R72R-60', 'ML Road Frame - Red, 60', 594.83),
+('FR-R38B-44', 'LL Road Frame - Black, 44', 337.22),
+('FR-R38B-48', 'LL Road Frame - Black, 48', 337.22),
+('FR-R38B-52', 'LL Road Frame - Black, 52', 337.22),
+('FR-M94S-42', 'HL Mountain Frame - Silver, 42', 1364.50),
+('FR-M94S-44', 'HL Mountain Frame - Silver, 44', 1364.50),
+('FR-M94S-52', 'HL Mountain Frame - Silver, 48', 1364.50),
+('FR-M94S-46', 'HL Mountain Frame - Silver, 46', 1364.50),
+('FR-M94B-42', 'HL Mountain Frame - Black, 42', 1349.60),
+('FR-M94B-44', 'HL Mountain Frame - Black, 44', 1349.60),
+('FR-M94B-48', 'HL Mountain Frame - Black, 48', 1349.60),
+('FR-M94B-46', 'HL Mountain Frame - Black, 46', 1349.60),
+('FR-M94B-38', 'HL Mountain Frame - Black, 38', 1349.60),
+('FR-M94S-38', 'HL Mountain Frame - Silver, 38', 1364.50),
+('BK-R93R-62', 'Road-150 Red, 62', 3578.27),
+('BK-R93R-44', 'Road-150 Red, 44', 3578.27),
+('BK-R93R-48', 'Road-150 Red, 48', 3578.27),
+('BK-R93R-52', 'Road-150 Red, 52', 3578.27),
+('BK-R93R-56', 'Road-150 Red, 56', 3578.27),
+('BK-R68R-58', 'Road-450 Red, 58', 1457.99),
+('BK-R68R-60', 'Road-450 Red, 60', 1457.99),
+('BK-R68R-44', 'Road-450 Red, 44', 1457.99),
+('BK-R68R-48', 'Road-450 Red, 48', 1457.99),
+('BK-R68R-52', 'Road-450 Red, 52', 1457.99),
+('BK-R50R-58', 'Road-650 Red, 58', 782.99),
+('BK-R50R-60', 'Road-650 Red, 60', 782.99),
+('BK-R50R-62', 'Road-650 Red, 62', 782.99),
+('BK-R50R-44', 'Road-650 Red, 44', 782.99),
+('BK-R50R-48', 'Road-650 Red, 48', 782.99),
+('BK-R50R-52', 'Road-650 Red, 52', 782.99),
+('BK-R50B-58', 'Road-650 Black, 58', 782.99),
+('BK-R50B-60', 'Road-650 Black, 60', 782.99),
+('BK-R50B-62', 'Road-650 Black, 62', 782.99),
+('BK-R50B-44', 'Road-650 Black, 44', 782.99),
+('BK-R50B-48', 'Road-650 Black, 48', 782.99),
+('BK-R50B-52', 'Road-650 Black, 52', 782.99),
+('BK-M82S-38', 'Mountain-100 Silver, 38', 3399.99),
+('BK-M82S-42', 'Mountain-100 Silver, 42', 3399.99),
+('BK-M82S-44', 'Mountain-100 Silver, 44', 3399.99),
+('BK-M82S-48', 'Mountain-100 Silver, 48', 3399.99),
+('BK-M82B-38', 'Mountain-100 Black, 38', 3374.99),
+('BK-M82B-42', 'Mountain-100 Black, 42', 3374.99),
+('BK-M82B-44', 'Mountain-100 Black, 44', 3374.99),
+('BK-M82B-48', 'Mountain-100 Black, 48', 3374.99),
+('BK-M68S-38', 'Mountain-200 Silver, 38', 2319.99),
+('BK-M68S-42', 'Mountain-200 Silver, 42', 2319.99),
+('BK-M68S-46', 'Mountain-200 Silver, 46', 2319.99),
+('BK-M68B-38', 'Mountain-200 Black, 38', 2294.99),
+('BK-M68B-42', 'Mountain-200 Black, 42', 2294.99),
+('BK-M68B-46', 'Mountain-200 Black, 46', 2294.99);
+
+
+select * from Products
+where ProductCode like 'BK-[^R]%-[0-9][0-9]'
+
+CREATE TABLE People (
+    FirstName VARCHAR(50),
+    MiddleInitial VARCHAR(5),
+    LastName VARCHAR(50)
+);
+GO
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('John', 'A.', 'Beaver');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Jean', 'P.', 'Handley');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Jinghao', NULL, 'Liu');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Linda', 'E.', 'Burnett');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Kerim', NULL, 'Hanif');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Kevin', NULL, 'Liu');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Donald', 'L.', 'Blanton');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Jackie', 'E.', 'Blackwell');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Bryan', NULL, 'Hamilton');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Todd', 'R.', 'Logan');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Barbara', 'J.', 'German');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Jim', NULL, 'Geist');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Betty', 'M.', 'Haines');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Sharon', 'J.', 'Looney');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Darren', NULL, 'Gehring');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Erin', 'M.', 'Hagens');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Jeremy', NULL, 'Los');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Elsa', NULL, 'Leavitt');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('David', 'O', 'Lawrence');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Hattie', 'J.', 'Haemon');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Anita', 'R.', 'Lucerne');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Rebecca', NULL, 'Laszlo');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Eric', NULL, 'Lang');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Brian', NULL, 'Groth');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Judy', 'R.', 'Lundahl');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Peter', NULL, 'Kurniawan');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Douglas', NULL, 'Groncki');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Sean', 'J.', 'Lunt');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Jeffrey', NULL, 'Kurtz');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Vamsi', NULL, 'Kuppa');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Jane', 'P.', 'Greer');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Alexander', 'J.', 'Deborde');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Deepak', NULL, 'Kumar');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Margaret', 'T.', 'Krupka');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Christopher', 'M.', 'Bright');
+INSERT INTO People (FirstName, MiddleInitial, LastName) VALUES ('Aidan', NULL, 'Delaney');
+
+select *, 
+case when MiddleInitial is null then FirstName
+when LastName is not null then FirstName + ' '+ MiddleInitial+ ' '+ LastName
+end as full_name
+
+from people
+
+
+CREATE TABLE [dbo].[TestMultipleZero]
+(
+    [A] [int] NULL,
+    [B] [int] NULL,
+    [C] [int] NULL,
+    [D] [int] NULL
+);
+GO
+
+INSERT INTO [dbo].[TestMultipleZero](A,B,C,D)
+VALUES 
+    (0,0,0,1),
+    (0,0,1,0),
+    (0,1,0,0),
+    (1,0,0,0),
+    (0,0,0,0),
+    (1,1,1,0);
+
+
+	select * from TestMultipleZero
+	where a<>0 or b<>0 or c<>0 or d<>0
+
+select * from TestMultipleZero
+where not (a=0 and b=0 and c=0 and d=0)
+
+select * from TestMultipleZero
+where a+b+c+d>0
+
+
+CREATE TABLE TestMax
+(
+    Year1 INT
+    ,Max1 INT
+    ,Max2 INT
+    ,Max3 INT
+);
+GO
+ 
+INSERT INTO TestMax 
+VALUES
+    (2001,10,101,87)
+    ,(2002,103,19,88)
+    ,(2003,21,23,89)
+    ,(2004,27,28,91);
+	select *,
+case	
+	when Max1>Max2 and Max1>Max3 then Max1
+	when max2>max1 and max2	>Max3 then max2
+	else max3 end as max
+	from TestMax 
+
+
+	CREATE TABLE agents (
+    name VARCHAR(20),
+    office VARCHAR(3),
+    IsHeadOffice CHAR(3)
+);
+
+INSERT INTO agents VALUES
+    ('Rich', 'UK', 'yes'),
+    ('Rich', 'US', 'no'),
+    ('Rich', 'NZ', 'no'),
+    
+    ('Brandy', 'US', 'yes'),
+    ('Brandy', 'UK', 'no'),
+    ('Karen', 'AUS', 'no'),
+    ('Karen', 'RUS', 'no'),
+    
+    ('Karen', 'NZ', 'yes'),
+    
+    ('Mary', 'US', 'yes'),
+    ('Mary', 'UK', 'no'),
+    ('Mary', 'CAN', 'no'),
+    
+    ('Charles', 'US', 'yes'),
+    ('Charles', 'UZB', 'no'),
+    ('Charles', 'AUS', 'no');
+
+	select name from agents
+	where office = 'us' and IsHeadOffice='yes'
+	intersect
+	select name from agents
+	where office = 'uk' and IsHeadOffice='no'
+
